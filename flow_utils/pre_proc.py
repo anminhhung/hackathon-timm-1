@@ -23,7 +23,7 @@ def pre_proc(INP_DIR):
         print(fi)
         inp_path = os.path.join(INP_DIR, fi)
         
-        img = Image.read(inp_path)
+        img = Image.open(inp_path)
         if img.format == 'GIF': 
             shutil.move(inp_path, os.path.join(NONE_DIR, fi))
             continue
