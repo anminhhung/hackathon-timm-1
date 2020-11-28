@@ -129,7 +129,7 @@ def main():
     # print(topk_ids)
     # print(topk_prob)
 
-    with open(os.path.join(args.output_dir, 'submission_best_{}.txt'.format(args.model)), 'w') as out_file:
+    with open(os.path.join(args.output_dir, 'submission_sam_{}.txt'.format(args.model)), 'w') as out_file:
         filenames = loader.dataset.filenames(basename=True)
         for filename, label, prob in zip(filenames, topk_ids, topk_prob):
             out_file.write(("{}" + "\t{}\t{:.4f}"*5 + "\n").format(
